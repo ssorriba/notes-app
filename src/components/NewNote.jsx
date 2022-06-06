@@ -25,25 +25,23 @@ const NewNote = ({ notes, setNotes }) => {
       content: noteContent,
     };
 
-    console.log(noteObject);
-
     setNotes([...notes, noteObject]);
     setNoteTitle("");
     setNoteContent("");
   };
 
   return (
-    <div className="border-4 rounded-2xl border-slate-700 m-5 mt-10 h-56 font-poppins sm:mx-32 lg:mx-40">
+    <div className="border-[5px] bg-alice-blue rounded-2xl border-yale-blue m-5 mt-14 h-56 font-poppins sm:min-w-80 lg:mx-auto lg:max-w-[61rem] lg:min-h-[15rem] drop-shadow-xl">
       <form className="flex flex-col justify-evenly" onSubmit={handleSubmit}>
         <input
           value={noteTitle}
-          className="text-xl text-note-brown font-medium m-5 focus:outline-none "
+          className="bg-alice-blue text-xl text-dark-jungle-green font-medium m-5 focus:outline-none "
           placeholder="My First Note"
           onChange={(e) => setNoteTitle(e.target.value)}
         />
         <textarea
           value={noteContent}
-          className="m-5 mt-0 text-note-brown focus:outline-none resize-none h-20 font-medium"
+          className="bg-alice-blue m-5 mt-0 text-dark-jungle-green focus:outline-none resize-none h-20 font-medium"
           placeholder="Your text here"
           onChange={(e) => setNoteContent(e.target.value)}
         />

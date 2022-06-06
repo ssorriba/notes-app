@@ -11,15 +11,15 @@ const Nav = ({ deletedView, setDeletedView }) => {
   };
 
   return (
-    <nav className="w-full bg-note-turquoise h-20 font-poppins flex justify-between">
-      <div className="text-4xl sm:text-5xl font-bold flex flex-col justify-center ml-5">
-        <p className="text-note-brown">Note It</p>
+    <nav className="w-full bg-dark-jungle-green h-24 font-poppins flex justify-between">
+      <div className="text-4xl sm:text-5xl font-bold flex flex-col justify-center ml-7">
+        <p className="text-alice-blue">Note It</p>
       </div>
       <div className="text-4xl flex flex-col justify-center hover:cursor-pointer">
         <img
           src={TrashIcon}
           alt="icono-gasto"
-          className="w-12 h-12 mr-3"
+          className="w-12 h-12 mr-7"
           onClick={handleClick}
         />
       </div>
