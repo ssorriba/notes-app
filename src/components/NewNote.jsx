@@ -4,8 +4,7 @@ import { generarId } from "../helpers/index";
 import SaveIcon from "../img/save.svg";
 import GearIcon from "../img/gear.svg";
 
-const NewNote = ({ notes, setNotes }) => {
-  const [error, setError] = useState(false);
+const NewNote = ({ notes, setNotes, setError }) => {
   const [noteTitle, setNoteTitle] = useState("");
   const [noteContent, setNoteContent] = useState("");
 

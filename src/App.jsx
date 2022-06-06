@@ -3,8 +3,10 @@ import { useState } from "react";
 import Nav from "./components/Nav";
 import NewNote from "./components/NewNote";
 import NotesContainer from "./components/NotesContainer";
+import Error from "./components/Error";
 
 function App() {
+  const [error, setError] = useState(false);
   const [notes, setNotes] = useState([]);
   const [deletedNotes, setDeletedNotes] = useState([]);
   const [deletedView, setDeletedView] = useState(false);
@@ -17,7 +19,10 @@ function App() {
   return (
     <div>
       <Nav deletedView={deletedView} setDeletedView={setDeletedView} />
-      {!deletedView ? <NewNote notes={notes} setNotes={setNotes} /> : null}
+      {error ? <Error /> : ""}
+      {!deletedView ? (
+        <NewNote notes={notes} setNotes={setNotes} setError={setError} />
+      ) : null}
 
       {notes.length > 0 && deletedView == false ? (
         <NotesContainer
